@@ -17,6 +17,17 @@
       f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-W2S48T2V');
   </script>
+
+  <script>
+    fetch('https://server-side-tagging-hdzbfcpfsq-uc.a.run.app', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({
+    event_name: 'hello_server_gtm',
+    source: 'poc'
+  })
+})
+  </script>
 </head>
 
 <body>
@@ -34,6 +45,9 @@
       });
     });
   </script>
+
+  
 </body>
 </html>
+
 
