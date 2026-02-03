@@ -35,8 +35,23 @@
       alert('event pushed');
     }
   </script>
+
+  <script>
+  fetch("https://server-side-tagging-hdzbfcpfsq-uc.a.run.app/collect", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      event_name: "hello_server_gtm",
+      source: "github_pages"
+    })
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
