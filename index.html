@@ -37,6 +37,8 @@
   </script>
 
   <script>
+  console.log("SCRIPT LOADED");
+
   fetch("https://server-side-tagging-hdzbfcpfsq-uc.a.run.app/collect", {
     method: "POST",
     headers: {
@@ -46,11 +48,15 @@
       event_name: "hello_server_gtm",
       source: "github_pages"
     })
-  });
+  })
+  .then(r => console.log("FETCH STATUS", r.status))
+  .catch(e => console.error("FETCH ERROR", e));
 </script>
+
 
 </body>
 </html>
+
 
 
 
